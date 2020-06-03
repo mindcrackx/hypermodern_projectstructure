@@ -1,0 +1,22 @@
+[flake8]
+# ANN = flake8-annotations
+# B,B9 = flake8-bugbear
+# BLK = black
+# D = flake8-docstrings
+# DAR = darglint
+# I = flake8-import-order
+# S = flake8-bandit
+select = ANN,B,B9,BLK,C,D,DAR,E,F,I,S,W
+max-complexity = 10
+ignore = E203,W501,W503
+max-line-length = 91
+
+# for flake8-import-order
+application-import-names = hypermodern_projectstructure, tests
+import-order-style = google
+
+# for flake8-bandit
+per-file-ignores = tests/*:S101
+
+# for flake8-docstrings
+docstring-convention = google
